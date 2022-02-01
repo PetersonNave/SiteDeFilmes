@@ -1,0 +1,47 @@
+.bannerArea{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    text-justify: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerTitle{
+    font-size: 150px;
+    padding-top: 350px;
+     background-color: transparent !important;
+   font-weight: bold;
+   text-shadow: 0.1em 0.1em 0.2em black;
+   opacity: 0.9;
+   transform: scale(0.9);
+   transition: all ease 0.3s;
+}
+.bannerTitle:hover{
+    transform: scale(1);
+    
+}
+.bannerShadowVertical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%) !important;
+    
+   
+}
+.bannerDescription{
+    background-color: transparent !important;
+    font-size: 30px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.4;
+    transition: all ease-in-out 1s;
+    
+}
+.bannerDescription:hover{
+    opacity: 1;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    transform: scale(1.2);
+}

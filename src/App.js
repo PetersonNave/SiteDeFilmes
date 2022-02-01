@@ -1,6 +1,8 @@
 import {React, useEffect, useState} from "react";
 import getMovies from "./getMovies";
 import BigListComp from "./components/bigList";
+import Banner from './components/banner';
+import './App.css'
 
 export default ()=>{
 
@@ -18,7 +20,9 @@ export default ()=>{
 
 return(
     <div className="Teste">
-      <section>
+      {listState.length !== 0 && <Banner item={listState}></Banner> }
+      
+      <section className="movies">
 
         {listState.map((item, key)=>(
           <BigListComp key={key} item={item}></BigListComp>
