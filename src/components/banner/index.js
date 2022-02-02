@@ -4,20 +4,21 @@ import './style.css'
 export default(item)=>{
 
     const [movieChanged, SetMovieChanged] = useState(null)
-    
+    const [voteAverage, setVoteAverage] = useState(0);
     useEffect(()=>{
 
         const banner = async () =>{
             const random = Math.floor(Math.random() * 20);       
             SetMovieChanged(item.item[0].items.results[random])
-           
-        }
+            setVoteAverage(item.item[0].items.results[random].vote_average);   
+            
+        }       
     banner();
-    
+   
     }, []);
-    console.log(movieChanged)
     
-
+    console.log(movieChanged)
+   
 return(
 
 
@@ -25,9 +26,20 @@ return(
         {movieChanged !== null && 
         <section className='bannerArea' style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movieChanged.backdrop_path})`}}>
             <div className='bannerShadowVertical'>
-            <div className='bannerTitle'>{movieChanged.name}</div>
-            <div className='bannerDescription'>{movieChanged.overview}</div>
+                {(movieChanged.name).indexOf(':') > 0 ?
+                <div className='bannerTitle'>{(movieChanged.name).slice(0, ((movieChanged.name).indexOf(':')))}</div>
+                 :
+                <div className='bannerTitle'>{(movieChanged.name).slice(0,20)}</div>
+                }
             
+            <div className='airYear'>{(movieChanged.first_air_date).slice(0,4)}</div>
+            <div className='bannerDescription'>{movieChanged.overview}</div>
+            <div className='info'>
+                
+                <div className='points'>{voteAverage * 10}% relevante</div>
+                <div className='seasons'>{}</div>
+
+            </div>
             </div>
         
    
