@@ -4,6 +4,12 @@
     font-family: 'Roboto', sans-serif;
     /* background-color: #111; */
     color: white;
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;         
 }
 body{background-color: #111;}
 h2{
@@ -38,11 +44,48 @@ width: 250px;
     
 }
 .movieRowListArea{
-  
+    
     overflow-x: hidden;
     padding: 30px 0px;
  
 }
 .movieRowList{
-    width: 9999px;
+    transition: all ease 0.5s;
+    
 }
+
+.arrowRight svg, .arrowLeft svg{
+
+    width: 100px;
+    height: inherit;
+}
+
+.arrowRight{
+    right: 0px;
+    overflow: hidden;
+}
+.arrowLeft{
+    left: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+.arrowLeft, .arrowRight{
+    overflow: hidden;
+    z-index: 100;
+    width: 100px;
+    height: 375px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.3s;
+    background-color: black;
+}
+.movieRowListArea:hover .arrowLeft,
+.movieRowListArea:hover .arrowRight{
+   
+    opacity: 0.7;
+}
+
+

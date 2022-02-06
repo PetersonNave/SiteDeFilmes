@@ -45,13 +45,15 @@
     text-shadow: 0.1em 0.1em 0.2em black;
     transform: scale(1.2);
 }
+
 .points{
     color: #46d369;
     font-weight: bold;
     font-size: 25px;
+    margin-top: 10px;
 }
 .airYear{
     font-weight: bold;
     font-size: 25px;
-    
+    margin-bottom: 10px;
 }
