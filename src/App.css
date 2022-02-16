@@ -3,3 +3,10 @@
   
   background-color: transparent !important;
 }
+@media (max-width:650px) {
+  .movies{
+    margin-top: -100px;
+    
+    background-color: transparent !important;
+  }
+}

@@ -57,3 +57,53 @@
     font-size: 25px;
     margin-bottom: 10px;
 }
+
+@media(max-width: 650px) {
+    .bannerArea{
+        height: 70vh;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        text-justify: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .bannerTitle{
+        font-size: 70px;
+        padding-top: 100px;
+         background-color: transparent !important;
+       font-weight: bold;
+       text-shadow: 0.1em 0.1em 0.2em black;
+       opacity: 0.9;
+       transform: scale(0.9);
+       transition: all ease 0.3s;
+    }
+    .bannerDescription{
+        background-color: transparent !important;
+        font-size: 16px;
+        width: 85%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.7;
+        transition: all ease-in-out 1s;
+        
+    }
+    .bannerDescription:hover{
+        opacity: 1;
+        text-shadow: 0.1em 0.1em 0.2em black;
+        transform: scale(1.1);
+    }
+    .points{
+        color: #46d369;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .airYear{
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+}
