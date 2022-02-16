@@ -58,7 +58,7 @@
     margin-bottom: 10px;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 750px) {
     .bannerArea{
         height: 70vh;
         background-size: cover;

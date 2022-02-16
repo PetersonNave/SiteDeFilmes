@@ -3,7 +3,7 @@
   
   background-color: transparent !important;
 }
-@media (max-width:650px) {
+@media (max-width:750px) {
   .movies{
     margin-top: -100px;
     

@@ -86,8 +86,10 @@ width: 250px;
     opacity: 0.7;
 }
 
-@media(max-width: 650px) {
-
+@media(max-width: 750px) {
+    .arrowLeft, .arrowRight{
+        visibility: hidden;
+    }
     h2{
         font-size: 25px;
         margin-left: 40px;
@@ -97,25 +99,16 @@ width: 250px;
     section{
         margin-bottom: -20px;
     }
-    .arrowLeft, .arrowRight{
-        overflow: hidden;
-        z-index: 100;
-        width: 85px;
-        height: 300px;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        opacity: 0.4;
-        transition: all ease 0.3s;
-        background-color: black;
-        margin-top: 40px;
-    }
     .movieRowListArea:hover .arrowLeft,
-.movieRowListArea:hover .arrowRight{
-   
-    opacity: 0.4;
-}
+    .movieRowListArea:hover .arrowRight{
+    opacity: 0;
+    }
+    .movieRowListArea{
+    
+       overflow-x: scroll;
+       
+     
+    }
 }
 
 

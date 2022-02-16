@@ -5,7 +5,7 @@ export default(item)=>{
     const itemUn = item.item;
     const [section, setSession] = useState(itemUn.items.results); 
     const [xPosition, setXPosition] = useState(30);
-
+    const [arrowsVisible]
     const clickLeft =() =>{
         if(xPosition - Math.round(window.innerWidth)< -4720){
            setXPosition(-5030+Math.round(window.innerWidth));
@@ -20,9 +20,8 @@ export default(item)=>{
          }else{
              setXPosition(xPosition+Math.round(window.innerWidth/2));
          }
-         console.log(xPosition - Math.round(window.innerWidth));
-    }
-
+        
+        }
 return(
 
 <div>
