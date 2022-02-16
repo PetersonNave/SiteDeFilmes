@@ -2,6 +2,7 @@ import {React, useEffect, useState} from "react";
 import getMovies from "./getMovies";
 import BigListComp from "./components/bigList";
 import Banner from './components/banner';
+import Footer from "./components/footer";
 import './App.css'
 
 export default ()=>{
@@ -19,7 +20,7 @@ export default ()=>{
   },[]);
 
 return(
-    <div className="Teste">
+    <div>
       {listState.length !== 0 && <Banner item={listState}></Banner> }
       
       <section className="movies">
@@ -29,7 +30,8 @@ return(
         ))}
 
       </section>
-
+          
+      <Footer></Footer>
     </div>
 
     
